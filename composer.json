@@ -1,14 +1,15 @@
 {
-    "name":        "josantonius/wp-language",
-    "version":     "1.0.1",
+    "name":        "josantonius/wp-notice",
+    "version":     "1.0.0",
     "type":        "library",
-    "description": "Load text domain plugin for translations.",
+    "description": "Display notices in WordPress administration panel.",
     "keywords": [
         "Wordpress",
-        "Translation",
-        "Text Domain",
-        "Plugin",
-        "Language",
+        "Notices",
+        "Admin",
+        "Error",
+        "Success",
+        "Warning",
         "HHVM",
         "PHP"
     ],
@@ -22,7 +23,7 @@
         }
     ],
     "support": {
-        "source": "https://github.com/josantonius/wp-language"
+        "source": "https://github.com/josantonius/wp-notice"
     },
     "config": {
         "preferred-install": "dist"
@@ -33,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Josantonius\\WP\\Language\\": "src/"
+            "Josantonius\\WP\\Notice\\": "src/"
         }
     },
     "extra": {

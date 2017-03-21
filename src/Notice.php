@@ -28,7 +28,7 @@ class Notice {
     public static $notices = [];
 
     /**
-     * Display notices in administration panel.
+     * Set notices.
      * 
      * @since 1.0.0
      *
@@ -62,6 +62,7 @@ class Notice {
     public static function display() {
 
         foreach (self::$notices as $value) {
+            
             echo $value;
         }
     }
