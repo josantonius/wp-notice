@@ -49,7 +49,7 @@ To use this class, simply:
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
-use Josantonius\WP\Notice\Notice;
+use Josantonius\WP_Notice\WP_Notice;
 ```
 ### Usage
 
@@ -59,21 +59,21 @@ Example of use for this library:
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-use Josantonius\WP\Notice\Notice;
+use Josantonius\WP_Notice\WP_Notice;
 
-add_action('admin_notices', 'Notice::display');
+add_action('admin_notices', 'WP_Notice::display');
 
-Notice::success('Success example');
-Notice::success('Success not dismissable', false);
+WP_Notice::success('Success example');
+WP_Notice::success('Success not dismissable', false);
 
-Notice::warning('Warning example');
-Notice::warning('Warning not dismissable', false);
+WP_Notice::warning('Warning example');
+WP_Notice::warning('Warning not dismissable', false);
 
 $error = new \WP_Error('error', 'Example of error creation from WP_Error');
 
-Notice::error($error);
-Notice::error('Example of error creation without going through WP_Error');
-Notice::error('Error not dismissable', false);
+WP_Notice::error($error);
+WP_Notice::error('Example of error creation without going through WP_Error');
+WP_Notice::error('Error not dismissable', false);
 ```
 
 ![image](resources/images/english-notices.png)

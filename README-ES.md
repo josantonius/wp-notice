@@ -49,7 +49,7 @@ Para utilizar esta librería, simplemente:
 ```php
 require __DIR__ . '/vendor/autoload.php';
 
-use Josantonius\WP\Notice\Notice;
+use Josantonius\WP_Notice\WP_Notice;
 ```
 ### Uso
 
@@ -59,21 +59,21 @@ Ejemplo de uso para esta librería:
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-use Josantonius\WP\Notice\Notice;
+use Josantonius\WP_Notice\WP_Notice;
 
-add_action('admin_notices', 'Notice::display');
+add_action('admin_notices', 'WP_Notice::display');
 
-Notice::success('Éxito');
-Notice::success('Éxito no descartable', false);
+WP_Notice::success('Éxito');
+WP_Notice::success('Éxito no descartable', false);
 
-Notice::warning('Advertencia');
-Notice::warning('Advertencia no descartable', false);
+WP_Notice::warning('Advertencia');
+WP_Notice::warning('Advertencia no descartable', false);
 
 $error = new \WP_Error('error', 'Creación de error utilizando WP_Error');
 
-Notice::error($error);
-Notice::error('Creación de error sin utilizar WP_Error');
-Notice::error('Error no descartable', false);
+WP_Notice::error($error);
+WP_Notice::error('Creación de error sin utilizar WP_Error');
+WP_Notice::error('Error no descartable', false);
 ```
 
 ![image](resources/images/notices-en-espanol.png)

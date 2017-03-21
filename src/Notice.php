@@ -9,14 +9,14 @@
  * @since      1.0.0
  */
 
-namespace Josantonius\WP\Notice;
+namespace Josantonius\WP_Notice;
 
 /**
  * Notice Handler.
  *
  * @since 1.0.0
  */
-class Notice {
+class WP_Notice {
 
     /**
      * Array with notices.
