@@ -1,5 +1,5 @@
 {
-    "name":        "josantonius/wp-notice",
+    "name":        "josantonius/wp_notice",
     "version":     "1.0.0",
     "type":        "library",
     "description": "Display notices in WordPress administration panel.",
@@ -23,7 +23,7 @@
         }
     ],
     "support": {
-        "source": "https://github.com/josantonius/wp-notice"
+        "source": "https://github.com/josantonius/wp_notice"
     },
     "config": {
         "preferred-install": "dist"

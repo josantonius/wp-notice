@@ -1,6 +1,6 @@
 # PHP WordPress Notice library
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/wp-notice/v/stable)](https://packagist.org/packages/josantonius/wp-notice) [![Total Downloads](https://poser.pugx.org/josantonius/wp-notice/downloads)](https://packagist.org/packages/josantonius/wp-notice) [![Latest Unstable Version](https://poser.pugx.org/josantonius/wp-notice/v/unstable)](https://packagist.org/packages/josantonius/wp-notice) [![License](https://poser.pugx.org/josantonius/wp-notice/license)](https://packagist.org/packages/josantonius/wp-notice)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/wp_notice/v/stable)](https://packagist.org/packages/josantonius/wp_notice) [![Total Downloads](https://poser.pugx.org/josantonius/wp_notice/downloads)](https://packagist.org/packages/josantonius/wp_notice) [![Latest Unstable Version](https://poser.pugx.org/josantonius/wp_notice/v/unstable)](https://packagist.org/packages/josantonius/wp_notice) [![License](https://poser.pugx.org/josantonius/wp_notice/license)](https://packagist.org/packages/josantonius/wp_notice)
 
 [English version](README.md)
 
@@ -26,15 +26,15 @@ La mejor forma de instalar esta extensión es a través de [composer](http://get
 
 Para instalar PHP WordPress Notice library, simplemente escribe:
 
-    $ composer require Josantonius/WP-Notice
+    $ composer require Josantonius/WP_Notice
 
 El comando anterior sólo instalará los archivos necesarios, si prefieres descargar todo el código fuente (incluyendo tests, directorio vendor, excepciones no utilizadas, documentos...) puedes utilizar:
 
-    $ composer require Josantonius/WP-Notice --prefer-source
+    $ composer require Josantonius/WP_Notice --prefer-source
 
 También puedes clonar el repositorio completo con Git:
 
-	$ git clone https://github.com/Josantonius/WP-Notice.git
+	$ git clone https://github.com/Josantonius/WP_Notice.git
 	
 ### Requisitos
 
