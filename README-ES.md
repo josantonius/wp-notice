@@ -61,8 +61,6 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Josantonius\WP_Notice\WP_Notice;
 
-add_action('admin_notices', 'WP_Notice::display');
-
 WP_Notice::success('Éxito');
 WP_Notice::success('Éxito no descartable', false);
 

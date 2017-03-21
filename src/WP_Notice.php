@@ -25,7 +25,7 @@ class WP_Notice {
      *
      * @var array $notices 
      */
-    public static $notices = [];
+    public static $notices = null;
 
     /**
      * Set notices.
@@ -36,6 +36,11 @@ class WP_Notice {
      * @param array  $param
      */
     public static function __callstatic($index, $param) {
+
+        if (is_null(self::$notices)) {
+
+            add_action('admin_notices', 'WP_Notice::display');
+        }
 
         $message = isset($param[0]) ? $param[0] : 'unknown';
 
