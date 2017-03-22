@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Josantonius\\WP\\WP_Notice\\": "src/"
+            "Josantonius\\WP_Notice\\": "src/"
         }
     },
     "extra": {
