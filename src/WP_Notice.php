@@ -39,7 +39,10 @@ class WP_Notice {
 
         if (is_null(self::$notices)) {
 
-            add_action('admin_notices', 'WP_Notice::display');
+            add_action(
+                'admin_notices', 
+                'Josantonius\\WP_Notice\\WP_Notice::display'
+            );
         }
 
         $message = isset($param[0]) ? $param[0] : 'unknown';
