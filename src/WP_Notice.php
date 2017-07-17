@@ -41,7 +41,7 @@ class WP_Notice {
 
             add_action(
                 'admin_notices', 
-                'Josantonius\\WP_Notice\\WP_Notice::display'
+                __CLASS__ . '::display'
             );
         }
 
