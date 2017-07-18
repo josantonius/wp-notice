@@ -4,7 +4,7 @@
 
 [English version](README.md)
 
-Carga de complemento de dominio de texto para traducciones.
+Mostrar avisos en el panel de administración de WordPress.
 
 ---
 
@@ -23,7 +23,7 @@ Carga de complemento de dominio de texto para traducciones.
 <p align="center"><strong>Echa un vistazo al código</strong></p>
 
 <p align="center">
-  <a href="" title="Echa un vistazo al código">
+  <a href="https://youtu.be/wKHnSJHpmYE" title="Echa un vistazo al código">
   	<img src="https://raw.githubusercontent.com/Josantonius/PHP-Algorithm/master/resources/youtube-thumbnail.jpg">
   </a>
 </p>
