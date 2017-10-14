@@ -80,7 +80,7 @@ WP_Notice::error('Error no descartable', false);
 
 ### Tests 
 
-Para ejecutar las [pruebas](tests/Asset/Test) simplemente:
+Para ejecutar las [pruebas](tests/WP_Notice/Test) simplemente:
 
     $ git clone https://github.com/Josantonius/WP_Notice.git
     

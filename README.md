@@ -80,7 +80,7 @@ WP_Notice::error('Error not dismissable', false);
 
 ### Tests 
 
-To run [tests](tests/Asset/Test) simply:
+To run [tests](tests/WP_Notice/Test) simply:
 
     $ git clone https://github.com/Josantonius/WP_Notice.git
     
