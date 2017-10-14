@@ -1,6 +1,6 @@
 {
     "name":        "josantonius/wp_notice",
-    "version":     "1.0.0",
+    "version":     "1.0.1",
     "type":        "library",
     "description": "Display notices in WordPress administration panel.",
     "keywords": [
@@ -23,7 +23,9 @@
         }
     ],
     "support": {
-        "source": "https://github.com/josantonius/wp_notice"
+        "issues": "https://github.com/josantonius/wp_register/issues",
+        "forum":  "http://stackoverflow.com/tags/josantonius/wp_register",
+        "source": "https://github.com/josantonius/wp_register"
     },
     "config": {
         "preferred-install": "dist"
@@ -34,12 +36,15 @@
     },
     "autoload": {
         "psr-4": {
-            "Josantonius\\WP_Notice\\": "src/"
+            "Josantonius\\WP_Notice\\": "src/WP_Notice/"
         }
     },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }

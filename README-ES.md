@@ -1,6 +1,6 @@
 # PHP WordPress Notice library
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/wp_notice/v/stable)](https://packagist.org/packages/josantonius/wp_notice) [![Total Downloads](https://poser.pugx.org/josantonius/wp_notice/downloads)](https://packagist.org/packages/josantonius/wp_notice) [![Latest Unstable Version](https://poser.pugx.org/josantonius/wp_notice/v/unstable)](https://packagist.org/packages/josantonius/wp_notice) [![License](https://poser.pugx.org/josantonius/wp_notice/license)](https://packagist.org/packages/josantonius/wp_notice)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/wp_notice/v/stable)](https://packagist.org/packages/josantonius/wp_notice) [![Total Downloads](https://poser.pugx.org/josantonius/wp_notice/downloads)](https://packagist.org/packages/josantonius/wp_notice) [![Latest Unstable Version](https://poser.pugx.org/josantonius/wp_notice/v/unstable)](https://packagist.org/packages/josantonius/wp_notice) [![License](https://poser.pugx.org/josantonius/wp_notice/license)](https://packagist.org/packages/josantonius/wp_notice) [![Travis](https://travis-ci.org/Josantonius/WP_Notice.svg)](https://travis-ci.org/Josantonius/WP_Notice)
 
 [English version](README.md)
 
@@ -12,21 +12,12 @@ Mostrar avisos en el panel de administración de WordPress.
 - [Requisitos](#requisitos)
 - [Cómo empezar y ejemplos](#cómo-empezar-y-ejemplos)
 - [Uso](#uso)
-- [TODO](#todo)
+- [Tests](#tests)
+- [Tareas pendientes](#-tareas-pendientes)
 - [Contribuir](#contribuir)
 - [Repositorio](#repositorio)
 - [Licencia](#licencia)
 - [Copyright](#copyright)
-
----
-
-<p align="center"><strong>Echa un vistazo al código</strong></p>
-
-<p align="center">
-  <a href="https://youtu.be/wKHnSJHpmYE" title="Echa un vistazo al código">
-  	<img src="https://raw.githubusercontent.com/Josantonius/PHP-Algorithm/master/resources/youtube-thumbnail.jpg">
-  </a>
-</p>
 
 ---
 
@@ -61,6 +52,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Josantonius\WP_Notice\WP_Notice;
 ```
+
 ### Uso
 
 Ejemplo de uso para esta librería:
@@ -86,11 +78,25 @@ WP_Notice::error('Error no descartable', false);
 
 ![image](resources/images/notices-en-espanol.png)
 
-### ☑ TODO
+### Tests 
 
-- [ ] Agregar tests
+Para ejecutar las [pruebas](tests/Asset/Test) simplemente:
+
+    $ git clone https://github.com/Josantonius/WP_Notice.git
+    
+    $ cd WP_Notice
+
+    $ bash bin/install-wp-tests.sh wordpress_test root '' localhost latest
+
+    $ phpunit
+
+### ☑ Tareas pendientes
+
+- [x] Completar tests
+- [ ] Mejorar la documentación
 
 ### Contribuir
+
 1. Comprobar si hay incidencias abiertas o abrir una nueva para iniciar una discusión en torno a un fallo o función.
 1. Bifurca la rama del repositorio en GitHub para iniciar la operación de ajuste.
 1. Escribe una o más pruebas para la nueva característica o expón el error.

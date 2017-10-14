@@ -34,15 +34,14 @@ class WP_Notice {
      *
      * @param string $index
      * @param array  $param
+     *
+     * @return boolean true
      */
     public static function __callstatic($index, $param) {
 
         if (is_null(self::$notices)) {
 
-            add_action(
-                'admin_notices', 
-                __CLASS__ . '::display'
-            );
+            add_action('admin_notices',  __CLASS__ . '::display');
         }
 
         $message = isset($param[0]) ? $param[0] : 'unknown';
@@ -60,12 +59,16 @@ class WP_Notice {
         $class = 'notice notice-' . $index . ' ' . $remove;
 
         self::$notices[] = "<div class='$class'><p>$message</p></div>";
+
+        return true;
     }
 
     /**
      * Display all saved notices.
      * 
      * @since 1.0.0
+     *
+     * @return void
      */
     public static function display() {
 
