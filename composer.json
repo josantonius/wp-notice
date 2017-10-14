@@ -23,9 +23,9 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/josantonius/wp_register/issues",
-        "forum":  "http://stackoverflow.com/tags/josantonius/wp_register",
-        "source": "https://github.com/josantonius/wp_register"
+        "issues": "https://github.com/josantonius/wp_notice/issues",
+        "forum":  "http://stackoverflow.com/tags/josantonius/wp_notice",
+        "source": "https://github.com/josantonius/wp_notice"
     },
     "config": {
         "preferred-install": "dist"
