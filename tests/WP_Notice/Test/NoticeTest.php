@@ -168,4 +168,4 @@ final class NoticeTest extends \WP_UnitTestCase {
         do_action('admin_notices');
 
     }
-}
+} 
