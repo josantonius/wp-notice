@@ -1,6 +1,6 @@
 # PHP WordPress Notice
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/wp_notice/v/stable)](https://packagist.org/packages/josantonius/wp_notice) [![Total Downloads](https://poser.pugx.org/josantonius/wp_notice/downloads)](https://packagist.org/packages/josantonius/wp_notice) [![Latest Unstable Version](https://poser.pugx.org/josantonius/wp_notice/v/unstable)](https://packagist.org/packages/josantonius/wp_notice) [![License](https://poser.pugx.org/josantonius/wp_notice/license)](https://packagist.org/packages/josantonius/wp_notice) [![Travis](https://travis-ci.org/Josantonius/WP_Notice.svg)](https://travis-ci.org/Josantonius/WP_Notice)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/WP_Notice/v/stable)](https://packagist.org/packages/josantonius/WP_Notice) [![Latest Unstable Version](https://poser.pugx.org/josantonius/WP_Notice/v/unstable)](https://packagist.org/packages/josantonius/WP_Notice) [![License](https://poser.pugx.org/josantonius/WP_Notice/license)](LICENSE) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6a34553cc861491db0cc50894c4c05cf)](https://www.codacy.com/app/Josantonius/WP_Notice?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Josantonius/WP_Notice&amp;utm_campaign=Badge_Grade) [![Total Downloads](https://poser.pugx.org/josantonius/WP_Notice/downloads)](https://packagist.org/packages/josantonius/WP_Notice) [![Travis](https://travis-ci.org/Josantonius/WP_Notice.svg)](https://travis-ci.org/Josantonius/WP_Notice) [![WP](https://img.shields.io/badge/WordPress-Standar-1abc9c.svg)](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/) [![CodeCov](https://codecov.io/gh/Josantonius/WP_Notice/branch/master/graph/badge.svg)](https://codecov.io/gh/Josantonius/WP_Notice)
 
 [Versión en español](README-ES.md)
 
@@ -8,9 +8,10 @@ Display notices in WordPress administration panel.
 
 ---
 
-- [Installation](#installation)
 - [Requirements](#requirements)
-- [Quick Start and Examples](#quick-start-and-examples)
+- [Installation](#installation)
+- [Available Methods](#available-methods)
+- [Quick Start](#quick-start)
 - [Usage](#usage)
 - [Tests](#tests)
 - [TODO](#-todo)
@@ -21,54 +22,114 @@ Display notices in WordPress administration panel.
 
 ---
 
-### Installation
+## Requirements
 
-The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
+This library is supported by **PHP versions 5.6** or higher and is compatible with **HHVM versions 3.0** or higher.
 
-To install PHP Wordpress Notice library, simply:
+## Installation
+
+The preferred way to install this extension is through [Composer](http://getcomposer.org/download/).
+
+To install **WP_Notice library**, simply:
 
     $ composer require Josantonius/WP_Notice
 
-The previous command will only install the necessary files, if you prefer to download the entire source code (including tests, vendor folder, exceptions not used, docs...) you can use:
+The previous command will only install the necessary files, if you prefer to **download the entire source code** you can use:
 
     $ composer require Josantonius/WP_Notice --prefer-source
 
-Or you can also clone the complete repository with Git:
+You can also **clone the complete repository** with Git:
 
-	$ git clone https://github.com/Josantonius/WP_Notice.git
-	
-### Requirements
+    $ git clone https://github.com/Josantonius/WP_Notice.git
 
-This library is supported by PHP versions 5.6 or higher and is compatible with HHVM versions 3.0 or higher.
+Or **install it manually**:
 
-To use this library in HHVM (HipHop Virtual Machine) you will have to activate the scalar types. Add the following line "hhvm.php7.scalar_types = true" in your "/etc/hhvm/php.ini".
+[Download WP_Notice.php](https://raw.githubusercontent.com/Josantonius/WP_Notice/master/src/class-wp-notice.php):
 
-### Quick Start and Examples
+    $ wget https://raw.githubusercontent.com/Josantonius/WP_Notice/master/src/class-wp-notice.php
 
-To use this class, simply:
+## Available Methods
+
+Available methods in this library:
+
+### - Generate success notice:
+
+```php
+WP_Notice::success($message, $dismissable);
+```
+
+| Atttribute | Description | Type | Required | Default
+| --- | --- | --- | --- | --- |
+| $message | Notice message. | string | Yes | |
+| $dismissable | Dimissable notice. | boolean | No | true |
+
+**@return** (boolean true)
+
+### - Generate warning notice:
+
+```php
+WP_Notice::warning($message, $dismissable);
+```
+
+| Atttribute | Description | Type | Required | Default
+| --- | --- | --- | --- | --- |
+| $message | Notice message. | string | Yes | |
+| $dismissable | Dimissable notice. | boolean | No | true |
+
+**@return** (boolean true)
+
+### - Generate error notice:
+
+```php
+WP_Notice::error($message, $dismissable);
+```
+
+| Atttribute | Description | Type | Required | Default
+| --- | --- | --- | --- | --- |
+| $message | Notice message. | string | Yes | |
+| $dismissable | Dimissable notice. | boolean | No | true |
+
+**@return** (boolean true)
+
+## Quick Start
+
+To use this library with **Composer**:
 
 ```php
 require __DIR__ . '/vendor/autoload.php';
+
+use Josantonius\WP_Notice;
+```
+
+Or If you installed it **manually**, use it:
+
+```php
+require_once __DIR__ . '/class-wp-notice.php';
 
 use Josantonius\WP_Notice\WP_Notice;
 ```
 
-### Usage
+## Usage
 
 Example of use for this library:
 
+### - Generate success notice:
+
 ```php
-<?php
-require __DIR__ . '/vendor/autoload.php';
-
-use Josantonius\WP_Notice\WP_Notice;
-
 WP_Notice::success('Success example');
 WP_Notice::success('Success not dismissable', false);
+```
 
+### - Generate warning notice:
+
+```php
 WP_Notice::warning('Warning example');
 WP_Notice::warning('Warning not dismissable', false);
+```
 
+### - Generate error notice:
+
+```php
 $error = new \WP_Error('error', 'Example of error creation from WP_Error');
 
 WP_Notice::error($error);
@@ -78,9 +139,9 @@ WP_Notice::error('Error not dismissable', false);
 
 ![image](resources/images/english-notices.png)
 
-### Tests 
+## Tests 
 
-To run [tests](tests/WP_Notice/Test) simply:
+To run [tests](tests) you just need [composer](http://getcomposer.org/download/) and to execute the following:
 
     $ git clone https://github.com/Josantonius/WP_Notice.git
     
@@ -88,34 +149,57 @@ To run [tests](tests/WP_Notice/Test) simply:
 
     $ bash bin/install-wp-tests.sh wordpress_test root '' localhost latest
 
-    $ phpunit
+    $ composer install
 
-### ☑ TODO
+Run unit tests with [PHPUnit](https://phpunit.de/):
 
-- [x] Create tests
-- [ ] Improve documentation
+    $ composer phpunit
 
-### Contribute
+Run [WordPress](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/) code standard tests with [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer):
 
-1. Check for open issues or open a new issue to start a discussion around a bug or feature.
-1. Fork the repository on GitHub to start making your changes.
-1. Write one or more tests for the new feature or that expose the bug.
-1. Make code changes to implement the feature or fix the bug.
-1. Send a pull request to get your changes merged and published.
+    $ composer phpcs
 
-This is intended for large and long-lived objects.
+Run [PHP Mess Detector](https://phpmd.org/) tests to detect inconsistencies in code style:
 
-### Repository
+    $ composer phpmd
 
-All files in this repository were created and uploaded automatically with [Reposgit Creator](https://github.com/Josantonius/BASH-Reposgit).
+Run all previous tests:
 
-### License
+    $ composer tests
+
+## ☑ TODO
+
+- [ ] Add new feature.
+- [ ] Improve tests.
+- [ ] Improve documentation.
+- [ ] Refactor code for disabled code style rules. See [phpmd.xml](phpmd.xml) and [.php_cs.dist](.php_cs.dist).
+
+## Contribute
+
+If you would like to help, please take a look at the list of
+[issues](https://github.com/Josantonius/WP_Notice/issues) or the [To Do](#-todo) checklist.
+
+**Pull requests**
+
+* [Fork and clone](https://help.github.com/articles/fork-a-repo).
+* Run the command `composer install` to install the dependencies.
+  This will also install the [dev dependencies](https://getcomposer.org/doc/03-cli.md#install).
+* Run the command `composer fix` to excute code standard fixers.
+* Run the [tests](#tests).
+* Create a **branch**, **commit**, **push** and send me a
+  [pull request](https://help.github.com/articles/using-pull-requests).
+
+## Repository
+
+The file structure from this repository was created with [PHP-Skeleton](https://github.com/Josantonius/PHP-Skeleton).
+
+## License
 
 This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file for more info.
 
-### Copyright
+## Copyright
 
-2017 Josantonius, [josantonius.com](https://josantonius.com/)
+2017 - 2018 Josantonius, [josantonius.com](https://josantonius.com/)
 
 If you find it useful, let me know :wink:
 

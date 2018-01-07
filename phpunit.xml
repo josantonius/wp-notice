@@ -18,13 +18,13 @@
 
     <testsuites>
         <testsuite name="WP_Notice Test Suite">
-            <directory>tests/WP_Notice/</directory>
+            <file>tests/class-notice-test.php</file>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist>
-            <directory>src/WP_Notice</directory>
+            <directory>src</directory>
         </whitelist>
     </filter>
 </phpunit>
