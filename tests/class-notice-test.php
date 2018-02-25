@@ -17,7 +17,7 @@ use Josantonius\WP_Notice\WP_Notice;
 /**
  * Tests class for WP_Notice library.
  */
-final class NoticeTest extends \WP_UnitTestCase {
+final class Notice_Test extends \WP_UnitTestCase {
 
 	/**
 	 * WP_Notice instance.
