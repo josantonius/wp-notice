@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2022-08-20
+
+* The repository was archived.
+
 ## 1.0.2 - 2018-01-07
 
 * Implemented `PHP Mess Detector` to detect inconsistencies in code styles.
@@ -43,6 +47,7 @@
 * Added `Josantonius\WP_Notice\Test\NoticeTest->testNoticesPrinted()` method.
 
 ## 1.0.0 - 2017-03-21
+
 * Added `Josantonius\WP_Notice\WP_Notice` class.
 * Added `Josantonius\WP_Notice\WP_Notice::__callstatic()` method.
 * Added `Josantonius\WP_Notice\WP_Notice::display()` method.

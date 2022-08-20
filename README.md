@@ -1,6 +1,7 @@
 # PHP WordPress Notice
 
-[![Latest Stable Version](https://poser.pugx.org/josantonius/WP_Notice/v/stable)](https://packagist.org/packages/josantonius/WP_Notice) [![Latest Unstable Version](https://poser.pugx.org/josantonius/WP_Notice/v/unstable)](https://packagist.org/packages/josantonius/WP_Notice) [![License](https://poser.pugx.org/josantonius/WP_Notice/license)](LICENSE) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6a34553cc861491db0cc50894c4c05cf)](https://www.codacy.com/app/Josantonius/WP_Notice?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Josantonius/WP_Notice&amp;utm_campaign=Badge_Grade) [![Total Downloads](https://poser.pugx.org/josantonius/WP_Notice/downloads)](https://packagist.org/packages/josantonius/WP_Notice) [![Travis](https://travis-ci.org/Josantonius/WP_Notice.svg)](https://travis-ci.org/Josantonius/WP_Notice) [![WP](https://img.shields.io/badge/WordPress-Standar-1abc9c.svg)](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/) [![CodeCov](https://codecov.io/gh/Josantonius/WP_Notice/branch/master/graph/badge.svg)](https://codecov.io/gh/Josantonius/WP_Notice)
+[![Latest Stable Version](https://poser.pugx.org/josantonius/wp-notice/v/stable)](https://packagist.org/packages/josantonius/wp-notice)
+[![License](https://poser.pugx.org/josantonius/wp-notice/license)](LICENSE)
 
 [Versión en español](README-ES.md)
 
@@ -14,11 +15,8 @@ Display notices in WordPress administration panel.
 - [Quick Start](#quick-start)
 - [Usage](#usage)
 - [Tests](#tests)
-- [TODO](#-todo)
-- [Contribute](#contribute)
-- [Repository](#repository)
+- [Sponsor](#Sponsor)
 - [License](#license)
-- [Copyright](#copyright)
 
 ---
 
@@ -32,27 +30,27 @@ The preferred way to install this extension is through [Composer](http://getcomp
 
 To install **WP_Notice library**, simply:
 
-    $ composer require Josantonius/WP_Notice
+    composer require josantonius/wp-notice
 
 The previous command will only install the necessary files, if you prefer to **download the entire source code** you can use:
 
-    $ composer require Josantonius/WP_Notice --prefer-source
+    composer require josantonius/wp-notice --prefer-source
 
 You can also **clone the complete repository** with Git:
 
-    $ git clone https://github.com/Josantonius/WP_Notice.git
+    git clone https://github.com/josantonius/wp-notice.git
 
 Or **install it manually**:
 
-[Download WP_Notice.php](https://raw.githubusercontent.com/Josantonius/WP_Notice/master/src/class-wp-notice.php):
+[Download WP_Notice.php](https://raw.githubusercontent.com/josantonius/wp-notice/master/src/class-wp-notice.php):
 
-    $ wget https://raw.githubusercontent.com/Josantonius/WP_Notice/master/src/class-wp-notice.php
+    wget https://raw.githubusercontent.com/josantonius/wp-notice/master/src/class-wp-notice.php
 
 ## Available Methods
 
 Available methods in this library:
 
-### - Generate success notice:
+### - Generate success notice
 
 ```php
 WP_Notice::success($message, $dismissable);
@@ -65,7 +63,7 @@ WP_Notice::success($message, $dismissable);
 
 **@return** (boolean true)
 
-### - Generate warning notice:
+### - Generate warning notice
 
 ```php
 WP_Notice::warning($message, $dismissable);
@@ -78,7 +76,7 @@ WP_Notice::warning($message, $dismissable);
 
 **@return** (boolean true)
 
-### - Generate error notice:
+### - Generate error notice
 
 ```php
 WP_Notice::error($message, $dismissable);
@@ -113,21 +111,21 @@ use Josantonius\WP_Notice\WP_Notice;
 
 Example of use for this library:
 
-### - Generate success notice:
+### - Generate success notice
 
 ```php
 WP_Notice::success('Success example');
 WP_Notice::success('Success not dismissable', false);
 ```
 
-### - Generate warning notice:
+### - Generate warning notice
 
 ```php
 WP_Notice::warning('Warning example');
 WP_Notice::warning('Warning not dismissable', false);
 ```
 
-### - Generate error notice:
+### - Generate error notice
 
 ```php
 $error = new \WP_Error('error', 'Example of error creation from WP_Error');
@@ -139,68 +137,41 @@ WP_Notice::error('Error not dismissable', false);
 
 ![image](resources/images/english-notices.png)
 
-## Tests 
+## Tests
 
 To run [tests](tests) you just need [composer](http://getcomposer.org/download/) and to execute the following:
 
-    $ git clone https://github.com/Josantonius/WP_Notice.git
+    git clone https://github.com/josantonius/wp-notice.git
     
-    $ cd WP_Notice
+    cd WP_Notice
 
-    $ bash bin/install-wp-tests.sh wordpress_test root '' localhost latest
+    bash bin/install-wp-tests.sh wordpress_test root '' localhost latest
 
-    $ composer install
+    composer install
 
 Run unit tests with [PHPUnit](https://phpunit.de/):
 
-    $ composer phpunit
+    composer phpunit
 
 Run [WordPress](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/) code standard tests with [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer):
 
-    $ composer phpcs
+    composer phpcs
 
 Run [PHP Mess Detector](https://phpmd.org/) tests to detect inconsistencies in code style:
 
-    $ composer phpmd
+    composer phpmd
 
 Run all previous tests:
 
-    $ composer tests
+    composer tests
 
-## ☑ TODO
+## Sponsor
 
-- [ ] Add new feature.
-- [ ] Improve tests.
-- [ ] Improve documentation.
-- [ ] Refactor code for disabled code style rules. See [phpmd.xml](phpmd.xml) and [.php_cs.dist](.php_cs.dist).
-
-## Contribute
-
-If you would like to help, please take a look at the list of
-[issues](https://github.com/Josantonius/WP_Notice/issues) or the [To Do](#-todo) checklist.
-
-**Pull requests**
-
-* [Fork and clone](https://help.github.com/articles/fork-a-repo).
-* Run the command `composer install` to install the dependencies.
-  This will also install the [dev dependencies](https://getcomposer.org/doc/03-cli.md#install).
-* Run the command `composer fix` to excute code standard fixers.
-* Run the [tests](#tests).
-* Create a **branch**, **commit**, **push** and send me a
-  [pull request](https://help.github.com/articles/using-pull-requests).
-
-## Repository
-
-The file structure from this repository was created with [PHP-Skeleton](https://github.com/Josantonius/PHP-Skeleton).
+If this project helps you to reduce your development time,
+[you can sponsor me](https://github.com/josantonius#sponsor) to support my open source work :blush:
 
 ## License
 
-This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file for more info.
+This repository is licensed under the [MIT License](LICENSE).
 
-## Copyright
-
-2017 - 2018 Josantonius, [josantonius.com](https://josantonius.com/)
-
-If you find it useful, let me know :wink:
-
-You can contact me on [Twitter](https://twitter.com/Josantonius) or through my [email](mailto:hello@josantonius.com).
+Copyright © 2017-2022, [Josantonius](https://github.com/josantonius#contact)

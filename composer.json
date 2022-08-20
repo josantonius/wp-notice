@@ -1,6 +1,6 @@
 {
-    "name":        "josantonius/wp_notice",
-    "type":        "library",
+    "name": "josantonius/wp-notice",
+    "type": "library",
     "description": "Display notices in WordPress administration panel.",
     "keywords": [
         "Wordpress",
@@ -15,16 +15,16 @@
     "license": "MIT",
     "authors": [
         {
-            "name":     "Josantonius",
-            "email":    "hello@josantonius.com",
-            "homepage": "https://josantonius.com",
-            "role":     "Developer"
+            "name": "Josantonius",
+            "email": "hello@josantonius.dev",
+            "homepage": "https://josantonius.dev",
+            "role": "Developer"
         }
     ],
     "support": {
-        "issues": "https://github.com/josantonius/wp_notice/issues",
-        "forum":  "http://stackoverflow.com/tags/josantonius/wp_notice",
-        "source": "https://github.com/josantonius/wp_notice"
+        "issues": "https://github.com/josantonius/wp-notice/issues",
+        "forum": "http://stackoverflow.com/tags/josantonius/wp-notice",
+        "source": "https://github.com/josantonius/wp-notice"
     },
     "config": {
         "preferred-install": "dist"
